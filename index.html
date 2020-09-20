@@ -5,7 +5,7 @@ var ua = navigator.userAgent;
 var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
 if (fwVersion === "0; Win64; x64" || fwVersion === "6.72" || fwVersion === "7.51"|| fwVersion === "8.00") {
 var i = 0;
-var msg = "Toutes nos félicitations! Nous avons détecté que votre PlayStation 4 fonctionne sous FW " + fwVersion + ", Compatiblel With PS4HostCS";
+var msg = "PlayStation 4 FW " + fwVersion + ", Compatibel With PS4HostCS";
 window.applicationCache.ondownloading = function () {
 document.getElementById("alertfw").innerHTML = '<div class="green">' + msg + "</div>";};
 window.applicationCache.onprogress = function (a) {
@@ -22,8 +22,7 @@ setTimeout(function () {
 document.getElementById("message").innerHTML = '<div align="center" style="color:white">Close WebBrowser, cut l\'Internet, and Open WebBrowser</div>';
 setTimeout(function () {
 document.getElementById("message").innerHTML = "";
-},5500);
-},1500);};
+},5500);},1500);};
 } else {
 var alertfirmware = Active;}
 </script>
@@ -34,41 +33,42 @@ var alertfirmware = Active;}
 <center><li><a href="credits.html" id="credits">Credits</a></li></center><hr></div></header> 
 <div id="menulist" class="container">
 <ul id="menu">
-<li id="li1"><a href="#" class="deroulant" id="deroulant0">Mira & hen</a>
+<li id="li0"><a href="#" class="deroulant" id="deroulant0">App Mira&hen</a>
 <ul class="submenu" id="submenu0">
 <!--<li><a href="#" id="mirahen" class="submenua" onclick="load_mira(); return false">Mira+HEN</a></li>-->
 <li><a href="#" id="mirahen" class="submenua" onclick="load_mira(); return false">Mirahen +Todex</a></li>
 <li><a href="#" id="hen300" onclick="inject_payload('hen300'); return false">TdexHen 3.0.0</a></li>
-<li><a href="#" id="mirausb" class="submenua" onclick="inject_payload('mirausb'); return false">MiraElfLoader Usb</a></li>           
-<li><a href="#" id="binloader" class="submenua" onclick="load_binloader(); return false">Binloader</a></li></ul></li>
-<li id="li3"><a href="#" class="deroulant" id="deroulant1">Application</a>
+<li><a href="#" id="mirausb" class="submenua" onclick="inject_payload('mirausb'); return false">MiraElfLoader Usb</a></li></ul></li>           
+<li id="li1"><a href="#" class="deroulant" id="deroulant1">App Menu One</a>
 <ul class="submenu" id="submenu1">
 <li><a href="http://ps4trainer.com/Trainer/index.html" id="ps4trainer">PS4 Trainer online</a></li>        
 <li><a href="#" id="WebRTE" onclick="inject_payload('WebRTE'); return false">WebRTE Loader</a></li>                          
 <li><a href="#" id="app2usb" onclick="inject_payload('app2usb'); return false">App To Usb</a></li>
 <li><a href="#" id="rifs" onclick="inject_payload('rifs'); return false">Renamer RIF</a></li>         
-<li><a href="#" id="linux" onclick="inject_payload('linux'); return false">Linux Loader</a></li></ul></li> 
-<li id="li4"><a href="#" class="deroulant" id="deroulant2">Backup & Restore</a>
+<li><a href="#" id="linux" onclick="inject_payload('linux'); return false">Linux Loader</a></li>
+<li><a href="#" id="binloader" class="submenua" onclick="load_binloader(); return false">Binloader</a></li></ul></li>
+<li id="li2"><a href="#" class="deroulant" id="deroulant2">App Menu Two</a>
 <ul class="submenu" id="submenu2">
 <li><a href="#" id="reactPSPLUS" onclick="inject_payload('reactPSPLUS'); return false">reActivate PSPLUS</a></li>
-<li><a href="#" id="dumper" onclick="inject_payload('dumper'); return false">Backup Games</a></li>          
+<li><a href="#" id="ps4debug" onclick="inject_payload('ps4debug'); return false">Activate Acount</a></li>
+<li><a href="#" id="dumper" onclick="inject_payload('dumper'); return false">Backup Games</a></li>
 <li><a href="#" id="dumper2" onclick="inject_payload('dumper2'); return false">Backup Gamesv1.8</a></li>
-<li><a href="#" id="cache" onclick="inject_payload('cache'); return false">Restore AppCache.db</a></li>
-<li><a href="#" id="backupDTB" onclick="inject_payload('backupDTB'); return false">Backup DTB</a></li>
-<li><a href="#" id="restoreDTB" onclick="inject_payload('restoreDTB'); return false">Restore DTB</a></li></ul></li>
-<li id="li5"><a href="#" class="deroulant" id="deroulant3">Dumper</a>
+<li><a href="#" id="ftp" onclick="inject_payload('ftp'); return false">Ftp Vtx</a></li></ul></li> 
+<li id="li3"><a href="#" class="deroulant" id="deroulant3">App Dumper</a>
 <ul class="submenu" id="submenu3">
 <li><a href="#" id="dumperkernel" onclick="inject_payload('dumperKernel'); return false">kernel Dumper</a></li>
 <li><a href="#" id="kernelclock" onclick="inject_payload('kernelClock'); return false">Clock kernel Dumper</a></li></ul>
-<li id="li5"><a href="#" class="deroulant" id="deroulant4">WebBrowser & Ftp</a>
+<li id="li4"><a href="#" class="deroulant" id="deroulant4">App Web option</a>
 <ul class="submenu" id="submenu4">
-<li><a href="#" id="ftp" onclick="inject_payload('ftp'); return false">Ftp Vtx</a></li>
 <li><a href="#" id="enabler" onclick="inject_payload('desabler'); return false">Activate Update</a></li>
 <li><a href="#" id="desabler" onclick="inject_payload('enabler'); return false">Désactivate Update</a></li>                          
 <li><a href="#" id="history" onclick="inject_payload('history'); return false">Activate History</a></li>
-<li><a href="#" id="browser" onclick="inject_payload('browser'); return false">Activate WebBrowser</a></li>
-<li><a href="#" id="ps4debug" onclick="inject_payload('ps4debug'); return false">Activate Acount</a></li>
-</ul></li></ul></div>
+<li><a href="#" id="browser" onclick="inject_payload('browser'); return false">Activate WebBrowser</a></li></ul></li>
+<li id="li5"><a href="#" class="deroulant" id="deroulant5">Backup&Restore</a>
+<ul class="submenu" id="submenu5">         
+<li><a href="#" id="cache" onclick="inject_payload('cache'); return false">Restore AppCache.db</a></li>  
+<li><a href="#" id="backupDTB" onclick="inject_payload('backupDTB'); return false">Backup DTB</a></li>
+<li><a href="#" id="restoreDTB" onclick="inject_payload('restoreDTB'); return false">Restore DTB</a></li></ul></li></ul></div>
 <div id="message" class="message"></div><hr>
 <div id="firmware"></div>
 <div class="overlay" id="cache-overlay">
@@ -100,8 +100,7 @@ cachedxp = "false";
 break;
 default:
 cachedxp = "Active";
-break;
-}
+break;}
 function Populate() {
 payloadcount = ((document.getElementById('xmb-contain').getElementsByTagName('li').length)- 2);
 var txt = "";
@@ -120,23 +119,15 @@ document.getElementById("infoz").style.display = "block";
 } else if (localStorage.getItem("ipanel") === "on" ) {
 document.getElementById("infoz").style.display = "block";
 } else {
-hideMe();
-}	
+hideMe();}
 if (localStorage.getItem("Debug") === "on") {
 document.getElementsByTagName("UL")[0].getElementsByTagName("LI")[payloadcount].style.display = "block";
 myNum = 15;
-} else {
-document.getElementsByTagName("UL")[0].getElementsByTagName("LI")[payloadcount].style.display = "none";
-myNum = 14;
 }
 if (cachedxp === "Active") {
 } else {
 xmbVue.handleKey('x', 12); //move to cache column (12)	
 }
-window.applicationCache.onupdateready = function (e){window.location.reload();
-};
-window.applicationCache.onerror = function (e) {document.getElementById('cacheUPDtxt').innerHTML = "ERROR UPDATING CACHE!!";
-};
 document.getElementById('clock').innerHTML = new Date();
 document.getElementById('clock').innerHTML = document.getElementById('clock').innerHTML.slice(0,21);
 }		
@@ -158,17 +149,6 @@ document.getElementById("hide").innerHTML = xpver;
 document.getElementById("hide").style.fontSize = "27px";
 document.getElementById("show").innerHTML = "&nbsp;&nbsp;&nbsp;SHOW INFO";
 y.style.display = "none";
-}
-}
-function HideLoaderBox(){SS.Loaded='1';setTimeout(function(){var x=document.querySelectorAll(".SelectedItem");var i;for(i=0;i<x.length;i++){x[i].className="InfoIcon Icon";}},1500);}LS.CurrentTemp=RC('CurrentTemp');LS.KernEpochDiff=RC('KernEpochDiff');
-if(LS.AutoHEN!='on'){LS.AutoHEN="off";AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = OFF");}if(LS.AutoHEN=='on'){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON");}
-function RunAutoHen(){SS.InfoBox=1;SS.ThisIsAutoHen = '1';var x = document.querySelectorAll(".box");var i;for(i = 0; i< x.length; i++){x[i].style.opacity="0";}InfoBox.style.display='block'; Title.style.display='none';
-IBT(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Title'));IBV(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Ver'));IBD(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Desc'));
-Loader.innerHTML='<object type="text/html" data="files/exploit.html" style="width:265px; height:56px;"></object>';}if (UA=="6.72"||UA=="8.00"){HasHenRun="no";}if (UA != "6.72" && UA != "8.00" && LS.AutoHEN == 'on'){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON - Hen Has Loaded");}
-function LoadAutoHen(){if(LS.IsItCached=="yes"&&HasHenRun=="no"&&LS.AutoHEN=="on"){RunAutoHen();}}window.onload = LoadAutoHen
-window.onkeyup=checkKeyUp;function checkKeyUp(e){e=e||window.event;if(e.keyCode=='117'&&SS.Loaded==null){HideInfo();}
-else if(e.keyCode=='118'&&LS.AutoHEN=="on"&&SS.ThisIsCredits!=1){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = OFF");LS.AutoHEN="off";}
-else if(e.keyCode=='118'&&LS.AutoHEN=="off"&&SS.ThisIsCredits!=1){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON");LS.AutoHEN="on";
 }
 }
 </script><h3 class="infoz" id="infoz">X-PROJECT LOADING..</h3><h3 class="hide" id="hide" onclick='hideMe()'>&nbsp;&nbsp;&nbsp;HIDE INFO</h3><h1 class="hide" id="show" onclick='hideMe()'></h1></body></html></script><script src="style.js"></script><script src="exploit.js"></script></body></html>

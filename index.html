@@ -3,7 +3,7 @@
 <script>document.body.style.backgroundImage = "url('0.jpg')";document.cookie = "exploit=null";document.cookie = "fan=55";document.cookie = "levelTemp=55";
 var ua = navigator.userAgent;
 var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
-if (fwVersion === "0; Win64; x64" || fwVersion === "6.72" || fwVersion === "7.51"|| fwVersion === "8.00") {
+if (fwVersion === "6.72") {
 var i = 0;
 var msg = "PlayStation 4 FW " + fwVersion + ", Compatibel With PS4HostCS";
 window.applicationCache.ondownloading = function () {
@@ -13,7 +13,7 @@ document.getElementById("cache-overlay").style.display = "block";
 document.getElementById("progress").innerHTML = '<div align="center" id="myBar"></div>';
 i = Math.round(100 * (a.loaded / a.total));
 document.getElementById("myBar").style.width = i + "%";
-if (i == 0) { document.getElementById("myBar").innerHTML = ""; } else { document.getElementById("myBar").innerHTML = i + "%"; }};
+if (i == 0){document.getElementById("myBar").innerHTML="";} else { document.getElementById("myBar").innerHTML = i+"%";}};
 window.applicationCache.oncached = function () {
 document.getElementById("cache-overlay").style.display = "none";
 document.getElementById("alertfw").innerHTML = "";
